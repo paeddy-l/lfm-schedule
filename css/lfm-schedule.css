@@ -1,0 +1,396 @@
+:root {
+  --lfm_schedule-primary-color: #6c6c6c;
+  --lfm_schedule-secondary-color: #e6e6e6;
+  --lfm_schedule-text-color: #666666;
+  --lfm_schedule-table-head-color: #6c6c6c;
+  --lfm_schedule-font-family: Arial, sans-serif;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: var(--lfm_schedule-primary-color);
+  color: #ffffff;
+}
+
+.tab button {
+  background-color: var(--lfm_schedule-primary-color);
+  color: #ffffff;
+  font-family: var(--lfm_schedule-font-family);
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.5s;
+  font-size: 14px;
+  background-color: var(--lfm_schedule-primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .03rem;
+}
+
+.tab button:hover {
+  background-color: var(--lfm_schedule-secondary-color) !important;
+  color: var(--lfm_schedule-text-color) !important;
+}
+
+.tablinks.active {
+  background-color: #e6e6e6 !important;
+  color: #666666 !important;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tabcontentactive {
+  display: block;
+  border: 1px solid #ccc;
+}
+
+.lfm_api_schedule_table_playlist_now {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  background-color: #ffc3c3;
+  margin-bottom: 0 !important;
+  cursor: default;
+}
+
+.lfm_api_schedule_table_playlist_now:hover {
+  background-color: #f9a8a8;
+}
+
+.lfm_api_schedule_table {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0 !important;
+  width: 100%;
+  background-color:#FFFFFF;
+  color:#000000;
+  border-left:0px;
+  border-right:0px;
+}
+
+.lfm_api_schedule_table:hover {
+  background-color: #eaeaea;
+  cursor: default;
+  margin-bottom: 0 !important;
+}
+
+.lfm_api_schedule_description {
+  padding-top: 10px;
+  padding-bottom: 2px;
+  align-items: center;
+  font-weight: bold;
+  font-size: 17px;
+  font-family: Arial, sans-serif;
+}
+
+.lfm_api_schedule_table_top {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0 !important;
+  width: 100%;
+  cursor: default;
+}
+
+.lfm_api_schedule_time_top {
+  width: 110px;
+  text-align: center;
+  padding-right: 15px;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.05) !important;
+  font-weight: bold;
+  font-size:17px;
+}
+
+.lfm_api_schedule_playlist_name_top {
+  display: block;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.05) !important;
+  text-align: left;
+  margin-left: 8px;
+  font-weight: bold;
+  font-size:17px;
+  font-family: Arial, sans-serif;
+}
+
+.lfm_api_schedule_time {
+  width: 120px;
+  text-align: center;
+  padding-right: 25px;
+  font-family: Arial, sans-serif;
+  font-size: 1.0rem;
+  color: black;
+}
+
+.lfm_api_schedule_headline {
+  padding-top: 10px;
+  padding-bottom: 8px;
+  align-items: center;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: default;
+}
+
+.lfm_api_schedule_description_headline {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  align-items: center;
+  font-weight: bold;
+  font-size: 17px;
+  padding-left: 10px;
+}
+
+.lfm_api_schedule_time_headline {
+  width: 120px;
+  text-align: center;
+  padding-right: 25px;
+  padding-left: 1px;
+}
+
+.lfm_api_schedule_playlist_name {
+  display: block;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.05) !important;
+  text-align: left;
+  margin-left: 0px;
+  margin-top: 8px;
+  color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+.lfm_api_schedule_playlist_description {
+  display: block;
+  text-align: left;
+  margin-left: 10px;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.05) !important;
+  border-left: 3px solid #666666;
+  font-family: Arial, sans-serif;
+  line-height: 1.1;
+  margin-bottom: 5px;
+  color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+.lfm_schedule {
+  display: none;
+  width: 90%;
+  max-width: 1165px;
+}
+
+#lfm_schedule_cen {
+  text-align: center;
+  padding: 20px;
+}
+
+.lfm_schedule_no_entry {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.lfm_api_schedule_table_head {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0 !important;
+  width: 100%;
+  background-color:var(--lfm_schedule-table-head-color);
+  color:#FFF;
+  cursor: default;
+}
+
+.lfm_api_schedule_head_time {
+  width: 120px;
+  text-align: center;
+  padding-right: 25px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight:600;
+}
+
+.lfm_api_schedule_head_title {
+  display: block;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.05) !important;
+  text-align: left;
+  margin-left: 0px;
+  font-weight:600;
+  margin-top: 8px;
+  color: #FFF;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  line-height: 1.1;
+}
+
+.lfm_api_schedule_playlist_head_description {
+  display: block;
+  text-align: left;
+  margin-left: 10px;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.05) !important;
+  border-left: 3px solid #E1E1E1;
+  font-family: Arial, sans-serif;
+  font-weight:600;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  line-height: 1.1;
+  margin-bottom: 5px;
+  color: #f2f2f2;
+}
+
+.lfm_icon {
+  height:19px;
+  width:19px;
+}
+
+.lfm_schedule_td {
+  vertical-align: middle !important;
+  padding: 0.2rem 0.5rem !important;
+}
+
+.lfm_nav-tab-wrapper {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.onair_time {
+  margin-top: 6px;
+  display: block;
+}
+
+.onair_symbol {
+  font-weight: bold;
+  color: #FFF;
+  background-color: #ff0000;
+  border: 2px solid #FFF;
+  padding: 2px;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+/* Media Queries */
+
+/* Smartphones: max-width 400px */
+@media screen and (max-width: 400px) {
+  .lfm_api_schedule_playlist_name,
+  .lfm_api_schedule_playlist_description,
+  .lfm_api_schedule_time,
+  .lfm_api_schedule_head_time,
+  .lfm_api_schedule_head_title,
+  .lfm_api_schedule_playlist_head_description {
+    font-size: 12px !important;
+  }
+
+  .lfm_api_schedule_head_img,
+  .lfm_api_schedule_td_img {
+    display: none;
+  }
+
+  .tab button {
+    width: 100%;
+  }
+
+  .tab {
+    margin-bottom: 10px;
+  }
+}
+
+/* Kleine Tablets: 401px bis 550px */
+@media screen and (min-width: 401px) and (max-width: 550px) {
+  .lfm_api_schedule_head_img,
+  .lfm_api_schedule_td_img {
+    display: none;
+  }
+
+  .tab button {
+    width: 100%;
+  }
+
+  .tab {
+    margin-bottom: 10px;
+  }
+}
+
+/* Tablets: 551px bis 829px */
+@media screen and (min-width: 551px) and (max-width: 829px) {
+  .lfm_api_schedule_head_img,
+  .lfm_api_schedule_td_img {
+    display: none;
+  }
+
+  .tab button {
+    width: 50%;
+  }
+
+  .tab {
+    margin-bottom: 5px;
+  }
+}
+
+/* Kleine Desktops: 830px bis 1180px */
+@media screen and (min-width: 830px) and (max-width: 1180px) {
+  .lfm_api_schedule_img {
+    width: 160px;
+    height: auto;
+    max-height: 80px;
+    margin-bottom: -4px;
+    margin-top: 4px;
+    color: black;
+  }
+
+  .lfm_api_schedule_head_img {
+    width: 160px;
+    padding-right: 25px;
+  }
+
+  .lfm_api_schedule_td_img {
+    width: 160px;
+    text-align: center;
+    padding-right: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 1.0rem;
+  }
+
+  .tab button {
+    width: 25%;
+  }
+
+  .tab {
+    margin-bottom: 5px;
+  }
+}
+
+/* Große Desktops: 1181px und größer */
+@media screen and (min-width: 1181px) {
+  .lfm_api_schedule_img {
+    width: 160px;
+    height: auto;
+    max-height: 80px;
+    margin-bottom: -4px;
+    margin-top: 4px;
+    color: black;
+  }
+
+  .lfm_api_schedule_head_img {
+    width: 160px;
+    padding-right: 25px;
+  }
+
+  .lfm_api_schedule_td_img {
+    width: 160px;
+    text-align: center;
+    padding-right: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 1.0rem;
+  }
+
+  .tab button {
+    width: 14.28%; /* Gleichmäßige Verteilung für 7 Tabs */
+  }
+
+  .tab {
+    margin-bottom: 5px;
+  }
+}
