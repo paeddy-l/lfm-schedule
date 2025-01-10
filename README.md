@@ -1,6 +1,7 @@
 # Einfacher Sendeplan für laut.fm Stationen
 
-Dieses Repository enthält einen Sendeplan für laut.fm Stationen, der einfach konfiguriert und verwendet werden kann. Mit den flexiblen Optionen können Bilder eingebunden und verschiedene Einstellungen vorgenommen werden, um den Sendeplan individuell anzupassen.
+Dieses Repository bietet einen Sendeplan für laut.fm-Stationen, der leicht konfiguriert und angepasst werden kann.
+Optional können auch Bilder für jeden Eintrag hinzugefügt werden.
 
 ## Funktionen
 - **Sendeplan für laut.fm Stationen**
@@ -52,9 +53,10 @@ Um den Sendeplan korrekt darzustellen, müssen folgende Dateien eingebunden werd
 - **lfm-schedule.js** (beinhaltet die Logik für den Sendeplan)
 
 ## HTML-Grundgerüst
-Die Datei `schedule.html` beinhaltet das Grundgerüst für den Sendeplan. In dieser Datei müssen die oben genannten Ressourcen (`schedule.css`, `jQuery` und `schedule.js`) eingebunden werden.
+Die Datei `schedule.html` beinhaltet das Grundgerüst für den Sendeplan. In dieser Datei müssen die oben genannten Ressourcen (`lfm-schedule.css`, `jQuery` und `lfm-schedule.js`) eingebunden werden.
 
 ## Verwendung
+1. **Hochladen**: Lade die benötigten Dateien auf deinem Server oder Webspace hoch
 1. **Station anpassen**: Ändere den Namen der Station in der Variable `station_name`.
 2. **Bilder aktivieren** (optional): Setze `images` auf `true` und gib die URL für die Bilder in `images_url` an.
 3. **Standardbild festlegen**: Wähle ein Standardbild, das angezeigt wird, wenn ein Bild nicht gefunden wird, und trage es in `img_default` ein.
@@ -64,9 +66,9 @@ Die Datei `schedule.html` beinhaltet das Grundgerüst für den Sendeplan. In die
 Hier ist ein Beispiel für eine Konfiguration:
 
 ```javascript
-const station_name = "radiorheinland";
+const station_name = "80er-90er";
 const images = true;
-const images_url = "https://radiorheinland.de/img/schedule/";
+const images_url = "https://tools.paeddy.de/img/sendeplan-demo/";
 const show_img_name = true;
 const img_default = "default.png";
 const daysOfWeek = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"];
