@@ -1,9 +1,23 @@
 :root {
-  --lfm_schedule-primary-color: #6c6c6c;
+  --lfm_schedule-primary-color: #8c8c8c;
   --lfm_schedule-secondary-color: #e6e6e6;
   --lfm_schedule-text-color: #666666;
-  --lfm_schedule-table-head-color: #6c6c6c;
+  --lfm_schedule-table-head-color: #8c8c8c;
+  --lfm_schedule-container-color: #8c8c8c;
   --lfm_schedule-font-family: Arial, sans-serif;
+}
+
+#lfm_schedule_selfhost {
+  text-align: center;
+  padding: 10px;
+  font-family: var(--lfm_schedule-font-family);
+}
+
+.lfm_schedule {
+  cursor: default;
+  display: none;
+  width: 95%;
+  max-width: 1165px;
 }
 
 .tab {
@@ -16,7 +30,6 @@
 .tab button {
   background-color: var(--lfm_schedule-primary-color);
   color: #ffffff;
-  font-family: var(--lfm_schedule-font-family);
   float: left;
   border: none;
   outline: none;
@@ -36,8 +49,8 @@
 }
 
 .tablinks.active {
-  background-color: #e6e6e6 !important;
-  color: #666666 !important;
+  background-color: #fff !important;
+  color: #222 !important;
 }
 
 .tabcontent {
@@ -45,6 +58,10 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+.tabcontent-container {
+  background-color: var(--lfm_schedule-container-color) !important;
 }
 
 .tabcontentactive {
@@ -58,7 +75,9 @@
   width: 100%;
   background-color: #ffc3c3;
   margin-bottom: 0 !important;
-  cursor: default;
+  border-top: 0.5px solid var(--lfm_schedule-table-head-color);
+  border-bottom: 0.5px solid var(--lfm_schedule-table-head-color);
+  height: 80px; 
 }
 
 .lfm_api_schedule_table_playlist_now:hover {
@@ -70,15 +89,15 @@
   padding-bottom: 10px;
   margin-bottom: 0 !important;
   width: 100%;
-  background-color:#FFFFFF;
-  color:#000000;
-  border-left:0px;
-  border-right:0px;
+  background-color: #fff;
+  color: #000000;
+  border-top: 0.5px solid var(--lfm_schedule-table-head-color);
+  border-bottom: 0.5px solid var(--lfm_schedule-table-head-color);
+  height: 80px;
 }
 
 .lfm_api_schedule_table:hover {
   background-color: #eaeaea;
-  cursor: default;
   margin-bottom: 0 !important;
 }
 
@@ -88,7 +107,6 @@
   align-items: center;
   font-weight: bold;
   font-size: 17px;
-  font-family: Arial, sans-serif;
 }
 
 .lfm_api_schedule_table_top {
@@ -96,7 +114,6 @@
   padding-bottom: 10px;
   margin-bottom: 0 !important;
   width: 100%;
-  cursor: default;
 }
 
 .lfm_api_schedule_time_top {
@@ -115,14 +132,12 @@
   margin-left: 8px;
   font-weight: bold;
   font-size:17px;
-  font-family: Arial, sans-serif;
 }
 
 .lfm_api_schedule_time {
-  width: 120px;
+  width: 85px;
   text-align: center;
   padding-right: 25px;
-  font-family: Arial, sans-serif;
   font-size: 1.0rem;
   color: black;
 }
@@ -133,7 +148,6 @@
   align-items: center;
   font-weight: bold;
   font-size: 17px;
-  cursor: default;
 }
 
 .lfm_api_schedule_description_headline {
@@ -159,7 +173,6 @@
   margin-left: 0px;
   margin-top: 8px;
   color: #000000;
-  font-family: Arial, sans-serif;
 }
 
 .lfm_api_schedule_playlist_description {
@@ -168,22 +181,9 @@
   margin-left: 10px;
   border-bottom: 0px solid rgba(0, 0, 0, 0.05) !important;
   border-left: 3px solid #666666;
-  font-family: Arial, sans-serif;
   line-height: 1.1;
   margin-bottom: 5px;
   color: #000000;
-  font-family: Arial, sans-serif;
-}
-
-.lfm_schedule {
-  display: none;
-  width: 90%;
-  max-width: 1165px;
-}
-
-#lfm_schedule_cen {
-  text-align: center;
-  padding: 20px;
 }
 
 .lfm_schedule_no_entry {
@@ -198,14 +198,12 @@
   width: 100%;
   background-color:var(--lfm_schedule-table-head-color);
   color:#FFF;
-  cursor: default;
 }
 
 .lfm_api_schedule_head_time {
-  width: 120px;
+  width: 100px;
   text-align: center;
   padding-right: 25px;
-  font-family: Arial, sans-serif;
   text-transform: uppercase;
   font-weight:600;
 }
@@ -218,7 +216,6 @@
   font-weight:600;
   margin-top: 8px;
   color: #FFF;
-  font-family: Arial, sans-serif;
   text-transform: uppercase;
   font-size: 1.05rem;
   line-height: 1.1;
@@ -230,7 +227,6 @@
   margin-left: 10px;
   border-bottom: 0px solid rgba(0, 0, 0, 0.05) !important;
   border-left: 3px solid #E1E1E1;
-  font-family: Arial, sans-serif;
   font-weight:600;
   text-transform: uppercase;
   font-size: 1.05rem;
@@ -245,8 +241,8 @@
 }
 
 .lfm_schedule_td {
-  vertical-align: middle !important;
-  padding: 0.2rem 0.5rem !important;
+  vertical-align: middle;
+  padding: 0.2rem 0.5rem;
 }
 
 .lfm_nav-tab-wrapper {
@@ -295,6 +291,10 @@
   .tab {
     margin-bottom: 10px;
   }
+
+  .lfm_schedule {
+    width: 99%;
+  }  
 }
 
 /* Kleine Tablets: 401px bis 550px */
@@ -311,6 +311,10 @@
   .tab {
     margin-bottom: 10px;
   }
+  
+  .lfm_schedule {
+    width: 99%;
+  } 
 }
 
 /* Tablets: 551px bis 829px */
@@ -349,7 +353,6 @@
     width: 160px;
     text-align: center;
     padding-right: 25px;
-    font-family: Arial, sans-serif;
     font-size: 1.0rem;
   }
 
@@ -382,7 +385,6 @@
     width: 160px;
     text-align: center;
     padding-right: 25px;
-    font-family: Arial, sans-serif;
     font-size: 1.0rem;
   }
 
