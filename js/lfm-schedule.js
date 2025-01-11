@@ -30,7 +30,7 @@ $(document).ready(function() {
     <div id="lfm_schedule" class="lfm_schedule">
       <div class="tab"></div>
       <table class="lfm_api_schedule_table_head">
-        <tr style="border-top: 1px solid #cccbcb;">
+        <tr>
           <td rowspan="2" class="lfm_api_schedule_head_time lfm_schedule_td">Uhrzeit</td>
           <td rowspan="2" class="lfm_api_schedule_head_img lfm_schedule_td"></td>
           <td rowspan="1" class="lfm_api_schedule_head_title lfm_schedule_td">Sendung</td>
@@ -137,12 +137,12 @@ $(document).ready(function() {
           // Bereitstellung des Sendeplans für den entsprechenden Tag
           if (schedule_entry.day === days[get_day] && schedule_entry.hour <= new Date().getHours()) {
             if (entryindex === "theend" || schedule[entryindex].day !== days[get_day] || schedule[entryindex].hour > new Date().getHours()) {
-              days_buffer[schedule_entry.day].push(`<table class="lfm_api_schedule_table_playlist_now"><tr style="border-top: 1px solid #cccbcb;"><td rowspan="2" class="lfm_api_schedule_time lfm_schedule_td"><span class="onair_symbol">ON AIR</span><br><span class="onair_time">${start_time} Uhr</span></td>${pl_img}<td rowspan="1" class="lfm_api_schedule_playlist_name lfm_schedule_td"><b>${schedule_entry.name}</b></td><td rowspan="1" class="lfm_api_schedule_playlist_description lfm_schedule_td">${schedule_entry.description}</td></tr></table>`);
+              days_buffer[schedule_entry.day].push(`<table class="lfm_api_schedule_table_playlist_now"><tr><td rowspan="2" class="lfm_api_schedule_time lfm_schedule_td"><span class="onair_symbol">ON AIR</span><br><span class="onair_time">${start_time} Uhr</span></td>${pl_img}<td rowspan="1" class="lfm_api_schedule_playlist_name lfm_schedule_td"><b>${schedule_entry.name}</b></td><td rowspan="1" class="lfm_api_schedule_playlist_description lfm_schedule_td">${schedule_entry.description}</td></tr></table>`);
             } else {
-              days_buffer[schedule_entry.day].push(`<table class="lfm_api_schedule_table"><tr style="border-top: 1px solid #cccbcb;"><td rowspan="2" class="lfm_api_schedule_time lfm_schedule_td">${start_time} Uhr</td>${pl_img}<td rowspan="1" class="lfm_api_schedule_playlist_name lfm_schedule_td"><b>${schedule_entry.name}</b></td><td rowspan="1" class="lfm_api_schedule_playlist_description lfm_schedule_td">${schedule_entry.description}</td></tr></table>`);
+              days_buffer[schedule_entry.day].push(`<table class="lfm_api_schedule_table"><tr><td rowspan="2" class="lfm_api_schedule_time lfm_schedule_td">${start_time} Uhr</td>${pl_img}<td rowspan="1" class="lfm_api_schedule_playlist_name lfm_schedule_td"><b>${schedule_entry.name}</b></td><td rowspan="1" class="lfm_api_schedule_playlist_description lfm_schedule_td">${schedule_entry.description}</td></tr></table>`);
             }
           } else {
-            days_buffer[schedule_entry.day].push(`<table class="lfm_api_schedule_table"><tr style="border-top: 1px solid #cccbcb;"><td rowspan="2" class="lfm_api_schedule_time lfm_schedule_td">${start_time} Uhr</td>${pl_img}<td rowspan="1" class="lfm_api_schedule_playlist_name lfm_schedule_td"><b>${schedule_entry.name}</b></td><td rowspan="1" class="lfm_api_schedule_playlist_description lfm_schedule_td">${schedule_entry.description}</td></tr></table>`);
+            days_buffer[schedule_entry.day].push(`<table class="lfm_api_schedule_table"><tr><td rowspan="2" class="lfm_api_schedule_time lfm_schedule_td">${start_time} Uhr</td>${pl_img}<td rowspan="1" class="lfm_api_schedule_playlist_name lfm_schedule_td"><b>${schedule_entry.name}</b></td><td rowspan="1" class="lfm_api_schedule_playlist_description lfm_schedule_td">${schedule_entry.description}</td></tr></table>`);
           }
         });
 
