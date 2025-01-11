@@ -1,33 +1,52 @@
 $(document).ready(function() {
   // Name der laut.fm Station
   const station_name = "";
-  
+
   // Option zum Anzeigen der Bilder (true / false)
   const images = true;
 
   // URL inkl. Unterordner, wo die Bilder zu suchen sind
   const images_url = "";
-  
+
   // Wenn true und images auch true ist, wird der
   // benötigte Dateinamen der Bilder angezeigt (true / false)
   const show_img_name = false;
-  
+
   // Das Standardbild, wenn das eigentliche Bild nicht gefunden wird.
   const img_default = ""; // Die gesamte URL ist "images_url + img_default"
-  
+
   // Die angezeigten Wochentage
   const daysOfWeek = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
- 
- 
-    //////////////////////////
-   // ENDE DER AENDERUNGEN //
-   /////////////////////////
- 
- 
-  
-  // DOM-Referenzen
+
+  //////////////////////////
+  // ENDE DER AENDERUNGEN //
+  /////////////////////////
+
+  // DOM-Referenz
+  const scheduleContainer = document.getElementById('lfm_schedule_selfhost');
+
+  // Grundstruktur in HTML erstellen
+  scheduleContainer.innerHTML = `
+    <div id="lfm_schedule" class="lfm_schedule">
+      <div class="tab"></div>
+      <table class="lfm_api_schedule_table_head">
+        <tr style="border-top: 1px solid #cccbcb;">
+          <td rowspan="2" class="lfm_api_schedule_head_time lfm_schedule_td">Uhrzeit</td>
+          <td rowspan="2" class="lfm_api_schedule_head_img lfm_schedule_td"></td>
+          <td rowspan="1" class="lfm_api_schedule_head_title lfm_schedule_td">Sendung</td>
+          <td rowspan="1" class="lfm_api_schedule_playlist_head_description lfm_schedule_td">Beschreibung</td>
+        </tr>
+      </table>
+      <div class="tabcontent-container"></div>
+    </div>
+  `;
+
   const tabContainer = document.querySelector('.tab');
   const tabContentContainer = document.querySelector('.tabcontent-container');
+
+  if (!images) {
+    $('.lfm_api_schedule_head_img').hide();
+  }
 
   // Dynamisch Tabs erstellen
   daysOfWeek.forEach((day, index) => {
@@ -46,7 +65,7 @@ $(document).ready(function() {
     const tabContent = document.createElement('div');
     tabContent.className = 'tabcontent';
     tabContent.innerHTML = `<div class="api_lfm_schedule">Loading...</div>`;
-    
+
     tabContentContainer.appendChild(tabContent);
   });
 
@@ -61,11 +80,11 @@ $(document).ready(function() {
       content.classList.remove("active");
       content.style.display = "none";
     });
-    
+
     tablinks.forEach(link => {
       link.classList.remove("active");
     });
-    
+
     // Fügt "active" zur aktiven Tab und Tab-Inhalt hinzu
     tabcontent[day].classList.add("active");
     tabcontent[day].style.display = "block";
@@ -86,7 +105,7 @@ $(document).ready(function() {
       dataType: "json",
       timeout: 10000
     }).done(function(schedule) {
-	  // Hole den aktuellen Wochentag
+      // Hole den aktuellen Wochentag
       var get_day = (new Date().getDay() || 7) - 1;
       openDAY(get_day); // Standardmäßig den aktuellen Tag öffnen
 
