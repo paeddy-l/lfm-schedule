@@ -53,7 +53,9 @@ Um den Sendeplan korrekt darzustellen, müssen folgende Dateien eingebunden werd
 - **lfm-schedule.js** (beinhaltet die Logik für den Sendeplan)
 
 ## HTML-Grundgerüst
-Die Datei `schedule.html` beinhaltet das Grundgerüst für den Sendeplan. In dieser Datei müssen die oben genannten Ressourcen (`lfm-schedule.css`, `jQuery` und `lfm-schedule.js`) eingebunden werden.
+Die Datei schedule.html enthält das grundlegende HTML-Gerüst, einschließlich des Sendeplans. In dieser Datei müssen die erforderlichen Ressourcen (lfm-schedule.css, jQuery und lfm-schedule.js) eingebunden werden.
+Der Sendeplan kann auch auf jeder anderen Seite integriert werden. Dazu müssen lediglich die Abhängigkeitsdateien geladen und der folgende HTML-Code an der gewünschten Stelle eingefügt werden:
+`<div id="lfm_schedule_selfhost">Loading..</div>`
 
 ## Verwendung
 1. **Hochladen**: Lade die benötigten Dateien auf deinem Server oder Webspace hoch
