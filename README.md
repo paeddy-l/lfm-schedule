@@ -80,3 +80,9 @@ Eine Live-Demo des Sendeplans ist verfügbar unter:
 
 ## Lizenz
 Dieses Projekt steht unter der MIT-Lizenz. Siehe die Datei [LICENSE](LICENSE) für weitere Informationen.
+
+## Datenschutz
+Dieses Projekt verwendet die öffentliche API von laut.fm, um den Sendeplan und ggf. Informationen über die ausgewählte Station abzurufen. Dabei werden Daten an laut.fm übertragen. laut.fm erklärt dazu:
+
+> Die laut.fm-API ist ein Dienst der LAUT AG und exponiert allgemeine Informationen über laut.fm, Auflistungen von Stationen und Informationen über einzelne Stationen. Bei Zugriff auf die API werden automatisch Informationen allgemeiner Natur an laut.fm übertragen. Diese Informationen beinhalten etwa die IP-Adresse, die Art des Webbrowsers und des verwendeten Betriebssystems, den Domainnamen Ihres Internet Service Providers und Ähnliches. Hierbei handelt es sich ausschließlich um Informationen, welche keine Rückschlüsse auf Ihre Person zulassen. Diese Informationen sind technisch notwendig, um beispielsweise den aktuell laufenden Titel korrekt auszuliefern und fallen bei Nutzung des Internets zwingend an. Anonyme Informationen dieser Art werden von der LAUT AG nur kurzfristig gespeichert und gegebenenfalls statistisch ausgewertet, um die API und die dahinterstehende Technik zu optimieren.
+
