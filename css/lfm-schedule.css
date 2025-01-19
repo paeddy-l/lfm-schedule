@@ -15,7 +15,7 @@
 
 .lfm_schedule {
   cursor: default;
-  display: none;
+  display: inline-block;
   width: 95%;
   max-width: 1165px;
 }
